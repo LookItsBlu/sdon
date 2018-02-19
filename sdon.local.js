@@ -1,4 +1,52 @@
 export default {
+    minified: {
+        //General vocabulary
+        'nick': 'nickname',
+        'enemyCount': '༜',
+            //Color vocabulary
+            'color1': '▶ A #',
+            'color2': '▶ B #',
+            'color3': '◆ #',
+            'color4': '⬤ #',
+            'color5': '⦾ #',
+            'color6': '○ #',
+            'color7': '◙ #',
+            'color8': '⦿ #',
+            'color9': '◌ #',
+        'title': 'title',
+        'artist': 'artist',
+        'difficulty': '✪',
+        'designer': '🕺',
+        'MP3name': '♫',
+        'bgBlack_true': 'bg is black',
+        'bgBlack_false': 'bg is not black',
+        'audioPreview': '⏳',
+        'subtitle': 'sub',
+
+        //Marker vocabulary
+        'time': '@',
+        'enemies': 'o>',
+        'warpType': 'this is a',
+            'timeWarp': 'timeWarp marker',
+            'spinRate': 'spinRate marker',
+        'val': 'his value is',
+        'shotType': 'shoots',
+            'bulletType': 'of',
+        'aim': 'aimed at the',
+            'mid': 'middle',
+            'pl': 'player',
+        'offset0': '-offset',
+        'offset1': '+offset',
+        'amount0': '-amount',
+        'amount1': '+amount',
+        'angle0': '-angle',
+        'angle1': '+angle',
+        'speed0': '-speed',
+        'speed1': '+speed',
+        'rows': 'row count is',
+        'lifespan': 'tracking time is',
+        'duration': 'duration is'
+    },
     en: {
         //General vocabulary
         'nick': 'the nickname is',
@@ -37,6 +85,7 @@ export default {
             'pl': 'player',
         'offset0': 'its starting offset is',
         'offset1': 'its ending offset is',
+        'amount': 'the bullet amount is',
         'amount0': 'its starting amount is',
         'amount1': 'its ending amount is',
         'angle0': 'its starting angle is',
@@ -45,6 +94,6 @@ export default {
         'speed1': 'its ending speed is',
         'rows': 'this wave\'s row count is',
         'lifespan': 'this homing tracks the player for',
-        'duration': 'this has a duration of'
+        'duration': 'this stream\'s duration is'
     }
 }
