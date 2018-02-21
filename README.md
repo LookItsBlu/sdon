@@ -4,7 +4,7 @@ sdon <-> json library for Soundodger
 
 ### Presentation
 
-sdon is the name given to this customizable soundodger level file format made with the idea of making manual level editing easier and less prone to error by being able.
+sdon is the name given to this customizable soundodger level file format made with the idea of making manual level editing easier and less prone to error.
 
 ### Made for you, by you
 
