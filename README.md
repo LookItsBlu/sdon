@@ -62,36 +62,6 @@ Here is an example of a json file turned into 2 sdon file, both with templates
         "_val": "1"
       },
       {
-        "_time": "111.753",
-        "_enemies": "0",
-        "_warpType": "timeWarp",
-        "_val": "1"
-      },
-      {
-        "_time": "112.303",
-        "_enemies": "0",
-        "_warpType": "timeWarp",
-        "_val": "0.8"
-      },
-      {
-        "_time": "112.427",
-        "_enemies": "0",
-        "_warpType": "timeWarp",
-        "_val": "2"
-      },
-      {
-        "_time": "112.553",
-        "_enemies": "0",
-        "_warpType": "timeWarp",
-        "_val": "4"
-      },
-      {
-        "_time": "112.594",
-        "_enemies": "0",
-        "_warpType": "timeWarp",
-        "_val": "1"
-      },
-      {
         "_time": "210.599",
         "_enemies": "0",
         "_warpType": "timeWarp",
@@ -126,85 +96,6 @@ Here is an example of a json file turned into 2 sdon file, both with templates
       },
       {
         "_time": "109.583",
-        "_enemies": "3",
-        "_shotType": "wave",
-        "_bulletType": "nrm2",
-        "_rows": "6",
-        "_aim": "mid",
-        "_offset0": "-25",
-        "_amount0": "2",
-        "_speed0": "4",
-        "_angle0": "0",
-        "_offset1": "-25",
-        "_amount1": "2",
-        "_speed1": "6",
-        "_angle1": "5"
-      },
-      {
-        "_time": "109.738",
-        "_enemies": "29",
-        "_shotType": "wave",
-        "_bulletType": "nrm2",
-        "_rows": "6",
-        "_aim": "mid",
-        "_offset0": "25",
-        "_amount0": "2",
-        "_speed0": "4",
-        "_angle0": "0",
-        "_offset1": "25",
-        "_amount1": "2",
-        "_speed1": "6",
-        "_angle1": "5"
-      },
-      {
-        "_time": "110.003",
-        "_enemies": "1",
-        "_shotType": "wave",
-        "_bulletType": "nrm2",
-        "_rows": "6",
-        "_aim": "mid",
-        "_offset0": "0",
-        "_amount0": "2",
-        "_speed0": "4",
-        "_angle0": "0",
-        "_offset1": "0",
-        "_amount1": "2",
-        "_speed1": "6",
-        "_angle1": "5"
-      },
-      {
-        "_time": "112.313",
-        "_enemies": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30",
-        "_shotType": "stream",
-        "_bulletType": "bubble",
-        "_aim": "mid",
-        "_amount": "0",
-        "_offset0": "0",
-        "_speed0": "4",
-        "_angle0": "1",
-        "_offset1": "0",
-        "_speed1": "4",
-        "_angle1": "1",
-        "_duration": "0.02"
-      },
-      {
-        "_time": "116.738",
-        "_enemies": "26",
-        "_shotType": "wave",
-        "_bulletType": "nrm",
-        "_rows": "10",
-        "_aim": "mid",
-        "_offset0": "95",
-        "_amount0": "1",
-        "_speed0": "3.5",
-        "_angle0": "1",
-        "_offset1": "95",
-        "_amount1": "1",
-        "_speed1": "6",
-        "_angle1": "1"
-      },
-      {
-        "_time": "116.797",
         "_enemies": "3",
         "_shotType": "wave",
         "_bulletType": "nrm2",
@@ -260,11 +151,6 @@ spinrate: [
 
 timewarp: [
 { @0, 1 }
-{ @111.753, 1 }
-{ @112.303, 0.8 }
-{ @112.427, 2 }
-{ @112.553, 4 }
-{ @112.594, 1 }
 { @210.599, 1 }
 
 ]
@@ -280,46 +166,6 @@ bullet: [
 }
 {
     @109.583, o>3;
-    nrm2 wave with 6 rows aimed at mid,
-    speed from 4 to 6,
-    offset from -25 to -25,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @109.738, o>29;
-    nrm2 wave with 6 rows aimed at mid,
-    speed from 4 to 6,
-    offset from 25 to 25,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @110.003, o>1;
-    nrm2 wave with 6 rows aimed at mid,
-    speed from 4 to 6,
-    offset from 0 to 0,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @112.313, o>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30;
-    bubble stream with an amount of 0 aimed at mid,
-    speed from 4 to 4,
-    offset from 0 to 0,
-    angle from 1 to 1,
-    lasts for 0.02 seconds
-}
-{
-    @116.738, o>26;
-    nrm wave with 10 rows aimed at mid,
-    speed from 3.5 to 6,
-    offset from 95 to 95,
-    amount from 1 to 1,
-    angle from 1 to 1
-}
-{
-    @116.797, o>3;
     nrm2 wave with 6 rows aimed at mid,
     speed from 4 to 6,
     offset from -25 to -25,
@@ -365,11 +211,6 @@ vv spinrate vv
 
 -------------------------
 { time -> 0 wub wub -> 1 }
-{ time -> 111.753 wub wub -> 1 }
-{ time -> 112.303 wub wub -> 0.8 }
-{ time -> 112.427 wub wub -> 2 }
-{ time -> 112.553 wub wub -> 4 }
-{ time -> 112.594 wub wub -> 1 }
 { time -> 210.599 wub wub -> 1 }
 
 ^^ timewarp ^^
@@ -385,46 +226,6 @@ bulletz!!!
 }
 {
     @109.583, o>3;
-    nrm2 wave (OAO) with 6 rows (oh noes!!) aimed at mid,
-    speed from 4 to 6,
-    offset from -25 to -25,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @109.738, o>29;
-    nrm2 wave (OAO) with 6 rows (oh noes!!) aimed at mid,
-    speed from 4 to 6,
-    offset from 25 to 25,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @110.003, o>1;
-    nrm2 wave (OAO) with 6 rows (oh noes!!) aimed at mid,
-    speed from 4 to 6,
-    offset from 0 to 0,
-    amount from 2 to 2,
-    angle from 0 to 5
-}
-{
-    @112.313, o>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30;
-    bubble stream with an amount of 0 aimed at mid,
-    speed from 4 to 4,
-    offset from 0 to 0,
-    angle from 1 to 1,
-    lasts for 0.02 seconds
-}
-{
-    @116.738, o>26;
-    nrm wave (OAO) with 10 rows (oh noes!!) aimed at mid,
-    speed from 3.5 to 6,
-    offset from 95 to 95,
-    amount from 1 to 1,
-    angle from 1 to 1
-}
-{
-    @116.797, o>3;
     nrm2 wave (OAO) with 6 rows (oh noes!!) aimed at mid,
     speed from 4 to 6,
     offset from -25 to -25,
