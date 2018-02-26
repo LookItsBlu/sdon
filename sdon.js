@@ -251,21 +251,34 @@ export default class sdon {
                 let bulletMatch; let bulletType = 3-1;
                 do {
                     bulletType++;
-                    bulletMatch = markers[i].match(this.regexp[bulletType]);
-                } while(bulletMatch == null);
-                // push that bullet type to the bullet order list
-                bulletTypeOrder.push(bulletType);
+                    bulletMatch = elem.match(this.regexp[bulletType]);
+                } while((bulletMatch == null) && bulletType<this.regexp.length);
+
+                // if the marker did not match any of the bullet marker regexp,
+                // it's not a bullet marker, so move on to the next marker type
+                if(bulletType>=this.regexp.length) {
+                    // remove the falsely counted marker
+                    markerCount[currentMarkerType]--;
+                    // moves to the next marker type in the order list
+                    currentMarkerType++;
+                    // counts the marker as part of this group
+                    markerCount[currentMarkerType]++;
+                }
+                else {
+                    // push that bullet type to the bullet order list
+                    bulletTypeOrder.push(bulletType);
+                }
             }
             else {
                 if(markerCount[currentMarkerType]>0) {
                     // if the template currently in use stops working,
                     // this means that we're changing type
-                    if(markers[i+1].match(curRegexp) == null) {
+                    if(!markers[i+1] || markers[i+1].match(curRegexp) == null) {
                         currentMarkerType++;
                     }
                     // if the time of the marker is smaller than the previous marker,
                     // this also means that we've changed type
-                    else if(markers[i].match(curRegexp)[1] > markers[i+1].match(curRegexp)[1]) {
+                    else if(elem.match(curRegexp)[1] > markers[i+1].match(curRegexp)[1]) {
                         currentMarkerType++;
                     }
                 }
@@ -402,7 +415,7 @@ export default class sdon {
 
 
 
-        // add spinrates
+        // add markers
         for(let order = 0; order < markerOrder.length; order++) {
             switch(markerOrder[order]) {
                 case 1:
@@ -500,9 +513,6 @@ export default class sdon {
                     break;
             }
         }
-
-        /*console.log(output);
-        console.log(JSON.stringify(output, null, 2));*/
 
         // this sdon object's data attribute now has a jsonified level!
         return output;
